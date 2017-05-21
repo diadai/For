@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div{width:40px;height:40px;border:4px solid red;position: absolute;
+        top:0;left:0;font-size:30px;text-align: center;}
+</style>
+<script>
+  window.onload=function(){
+   var Odiv=document.getElementsByTagName('div');
+   var str='';
+
+     for(var i=1;i<12;i++){
+         str+='<div>'+i+'</div>';
+     }
+     document.body.innerHTML=str;
+     var len=Odiv.length;
+      for(var j=0;j<len;j++){
+
+          if(j<(len-1)/2) {
+              Odiv[j].style.left = j * 44 + 'px';
+              Odiv[j].style.top = j * 44 + 'px';
+          }
+          else{
+              Odiv[j].style.left=j*44+'px';
+              Odiv[j].style.top=(len-1-j)*44+'px';
+          }
+      }
+  };
+</script>
+<body>
+
+</body>
+</html>
